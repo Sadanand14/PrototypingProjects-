@@ -11,6 +11,7 @@ public class LevelManagerScript : MonoBehaviour {
     public Text[] textList;
     private Tower tower;
     private bool gameOver = false;
+    public float gameTIme;
     public GameObject EndGame;
     // Use this for initialization
     void Start() {
@@ -43,7 +44,7 @@ public class LevelManagerScript : MonoBehaviour {
     void setFields()
     {
         timer = GameObject.FindObjectOfType<TimerScript>();
-        timer.SetMaxtTime(60f); //  Set Timer MaxVALUE
+        timer.SetMaxtTime(gameTIme); //  Set Timer MaxVALUE
 
         for (int i = 0; i < textList.Length; i++)
         {
