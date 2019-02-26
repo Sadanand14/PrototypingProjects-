@@ -19,6 +19,10 @@ public class TimerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         timer.value+= Time.deltaTime;
+        if (timer.value >= timer.maxValue)
+        {
+            GameObject.FindObjectOfType<LevelManagerScript>().GameComplete();
+        }
 	}
 
     public void SetMaxtTime(float x)
